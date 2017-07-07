@@ -783,7 +783,7 @@ class  BulbScanner():
 		return self.found_bulbs
 
 	def scan(self, timeout=10):
-
+        #ask device for it's configuration tcp 81 8a 8b 96 
 		DISCOVERY_PORT = 48899
 
 		sock = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
@@ -1114,7 +1114,6 @@ def parseArgs():
 					  action="store_true", dest="listcolors", default=False,
 					  help="List color names")
 
-	parser.add_option("-s", "--scan",
 					  action="store_true", dest="scan", default=False,
 					  help="Search for bulbs on local network")
 	parser.add_option("-S", "--scanresults",
